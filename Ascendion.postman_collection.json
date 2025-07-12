@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "373c3072-f81e-4ae8-9f9f-7506d2f61bc8",
-		"name": "Ascend",
+		"name": "Ascendion API Test Collection",
 		"description": "Testable API requests for Ascendion",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "2139192"
