@@ -4,7 +4,7 @@ To Run this Postman Collection, please follow the below steps,
 
 1. Clone the Git Repository
 2. Locate the Postman Collection Files
-     2.1 Stored under a folder named /postman/tests
+     2.1 Stored as Ascend.postman_collection.json
 3. Import into Postman (GUI)
      3.1 Open the Postman desktop app.
      3.2 Click "Import" (top-left).
