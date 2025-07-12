@@ -1,0 +1,90 @@
+{
+	"id": "7ce9868b-f054-4be1-82d8-3892eb035547",
+	"name": "Ascend",
+	"timestamp": "2025-07-12T19:41:05.285Z",
+	"collection_id": "2139192-373c3072-f81e-4ae8-9f9f-7506d2f61bc8",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 3,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-07-12T19:41:04.345Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "8d4dd598-f3c3-464b-92ee-95ad1f48d256",
+			"name": "Scenario 1: Create a new employee entry with Name, Gender, Email and Status (active or inactive)",
+			"url": "https://gorest.co.in/public/v2/users",
+			"time": 379,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verify that the created record matches the request body": true,
+				"Verify that the ID returned exists and is in numerical format": true
+			},
+			"testPassFailCounts": {
+				"Verify that the created record matches the request body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the ID returned exists and is in numerical format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				379
+			],
+			"allTests": [
+				{
+					"Verify that the created record matches the request body": true,
+					"Verify that the ID returned exists and is in numerical format": true
+				}
+			]
+		},
+		{
+			"id": "267b597f-3338-4bd7-8dd9-f37bc0c60621",
+			"name": "Scenario 2: Verify status for first entry is only either \"active\" or \"inactive\"",
+			"url": "https://gorest.co.in/public/v2/users",
+			"time": 340,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the status value of the first user whether active or inactive": true
+			},
+			"testPassFailCounts": {
+				"Check the status value of the first user whether active or inactive": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				340
+			],
+			"allTests": [
+				{
+					"Check the status value of the first user whether active or inactive": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 719,
+	"collection": {
+		"requests": [
+			{
+				"id": "8d4dd598-f3c3-464b-92ee-95ad1f48d256",
+				"method": "POST"
+			},
+			{
+				"id": "267b597f-3338-4bd7-8dd9-f37bc0c60621",
+				"method": "GET"
+			}
+		]
+	}
+}
