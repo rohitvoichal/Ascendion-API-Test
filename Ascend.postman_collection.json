@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "373c3072-f81e-4ae8-9f9f-7506d2f61bc8",
+		"name": "Ascend",
+		"description": "Testable API requests for Ascendion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2139192"
+	},
+	"item": [
+		{
+			"name": "Scenario 1: Create a new employee entry with Name, Gender, Email and Status (active or inactive)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"var requestBody = JSON.parse(pm.request.body.raw);",
+							"",
+							"pm.test(\"Verify that the created record matches the request body\", function () {",
+							"    pm.expect(jsonData.name).to.equal(requestBody.name);",
+							"    pm.expect(jsonData.email).to.equal(requestBody.email);",
+							"    pm.expect(jsonData.gender).to.equal(requestBody.gender);",
+							"    pm.expect(jsonData.status).to.equal(requestBody.status);",
+							"});",
+							"",
+							"pm.test(\"Verify that the ID returned exists and is in numerical format\", function () {",
+							"    pm.expect(jsonData).to.have.property('id');",
+							"    pm.expect(jsonData.id).to.be.a('number');",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 622ca1120dd30fc6b34287bfc852e9d736de59a4a118b0981a6dd237628dd11a"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"{{name}}\",\n    \"gender\": \"{{gender}}\",\n    \"email\": \"{{email}}\",\n    \"status\": \"{{status}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				},
+				"description": "Generated from cURL: curl -i -H \"Accept:application/json\" -H \"Content-Type:application/json\" -H \"Authorization: Bearer 62f92ec45a7093df225b477425753e22ec0bf31c55c2950909c7e62daa2e0c5c\" -XPOST \"https://gorest.co.in/public/v2/users\" -d '{\"name\":\"Ayrton Senna\", \"gender\":\"male\", \"email\":\"ayrton.senna@15ce.com\", \"status\":\"active\"}' "
+			},
+			"response": []
+		},
+		{
+			"name": "Scenario 2: Verify status for first entry is only either \"active\" or \"inactive\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"pm.test(\"Check the status value of the first user whether active or inactive\", function () {",
+							"    pm.expect(jsonData[0].status).to.satisfy(function(status) {",
+							"        return status === 'active' || status === 'inactive';",
+							"    });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 622ca1120dd30fc6b34287bfc852e9d736de59a4a118b0981a6dd237628dd11a"
+					}
+				],
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				},
+				"description": "Generated from cURL: curl -i -H \"Accept:application/json\" -H \"Content-Type:application/json\" -H \"Authorization: Bearer 62f92ec45a7093df225b477425753e22ec0bf31c55c2950909c7e62daa2e0c5c\" -XGET \"https://gorest.co.in/public/v2/users\""
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "name",
+			"value": "name",
+			"type": "default"
+		},
+		{
+			"key": "gender",
+			"value": "gender",
+			"type": "default"
+		},
+		{
+			"key": "email",
+			"value": "email",
+			"type": "default"
+		},
+		{
+			"key": "status",
+			"value": "status",
+			"type": "default"
+		}
+	]
+}
