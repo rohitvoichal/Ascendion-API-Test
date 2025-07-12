@@ -4,13 +4,28 @@ To Run this Postman Collection, please follow the below steps,
 
 1. Clone the Git Repository
 2. Locate the Postman Collection Files
-     2.1 Stored as Ascend.postman_collection.json
+   <br/>
+   Stored as Ascendion.postman_collection.json
+   
 3. Import into Postman (GUI)
-     3.1 Open the Postman desktop app.
-     3.2 Click "Import" (top-left).
-     3.3 Select the *.postman_collection.json file.
+   <br/>
+   Open the Postman desktop app.
+   <br/>
+   Click "Import" (top-left).
+   <br/>
+   Select the *.postman_collection.json file.
+   
 4. Run the Tests in Postman
-     4.1 After importing, go to the Collections tab in Postman.
-     4.2 Open the imported collection.
-     4.3 Click "Run" button.
-     4.4 Click "Start Run" to execute the API tests.
+   <br/>
+   After importing, go to the Collections tab in Postman.
+   <br/>
+   Open the imported collection.
+   <br/>
+   Click "Run" button.
+   <br/>
+   Click "Start Run" to execute the API tests.
+<br/>
+<br/>
+Note: In case you wish to add new employee details within the Test API endpoint (Scenario 1: Create a new employee entry with Name, Gender, Email and Status (active or inactive),
+Scenario 1: Create a new employee entry with Name, Gender, Email and Status (active or inactive)
+you can open the imported collection and select the Variables tab. You can add you own details and validate.
