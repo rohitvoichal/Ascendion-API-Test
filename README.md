@@ -30,6 +30,9 @@ To Run this Postman Collection, please follow the below steps,
    <img width="955" height="550" alt="image" src="https://github.com/user-attachments/assets/b79de4ff-89b2-4eec-91c1-34643ce1c724" />
    <br/>
    D. Click "Start Run" to execute the API tests.
+   <br/>
+   <img width="981" height="480" alt="image" src="https://github.com/user-attachments/assets/6d84284b-825b-4b07-9bc0-7790f4f3f04a" />
+
 <br/>
 <br/>
 Note: In case you wish to add new employee details within the Test API endpoint (Scenario 1: Create a new employee entry with Name, Gender, Email and Status (active or inactive),
