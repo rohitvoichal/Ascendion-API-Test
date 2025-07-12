@@ -6,7 +6,7 @@ To Run this Postman Collection, please follow the below steps,
     <br/>
 2. Locate the Postman Collection Files
    <br/>
-   A.Stored as Ascendion.postman_collection.json
+   A.Stored as postman_collection/test/Ascendion.postman_collection.json
    <br/>
    
 3. Import into Postman (GUI)
